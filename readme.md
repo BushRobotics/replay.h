@@ -29,7 +29,7 @@ When step has reached the desired length, set `replay[step].last` to `1`.
 Here's a simple example that records the positions of four wheels
 ```c
 void opcontrol() {
-	ReplayStep* replay = malloc(sizeof(ReplayStep) * REPLAY_LEN);
+	ReplayStep* replay = malloc(sizeof(ReplayStep) * REPLAY_LEN); // since you typically delay 2ms every step, 500 steps is typically equivalent to 1 second
 	int step = 0;
 	bool recording = false;
 	/*
