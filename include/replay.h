@@ -18,12 +18,12 @@ void write_replay(ReplayStep *step, char* filename) {
 ReplayStep *read_replay(char* filename) {
 	FILE *f = fopen(filename, "rb");
 	
+	// calculate filesize
 	fseek(f, 0, SEEK_END);
 	size_t size = ftell(f);
 	fseek(f, 0, SEEK_SET);
-	printf("file size: %zu\r\n", size);
 	
-	ReplayStep* replay = malloc(size);
+	ReplayStep* replay = malloc(size); // we'll need to allocate the same amount of memory the file takes up
 	ReplayStep currentstep;
 	int i = 0;
 	while (fread(&currentstep, sizeof(ReplayStep), 1, f)) {
