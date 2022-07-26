@@ -1,0 +1,15 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Iinclude",
+      "-o",
+      "test",
+      "test.c"
+    ],
+    "directory": "/home/vincent/Documents/code/replay",
+    "file": "/home/vincent/Documents/code/replay/test.c",
+    "output": "/home/vincent/Documents/code/replay/test"
+  }
+]
