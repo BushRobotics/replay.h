@@ -28,7 +28,6 @@ int main() {
 		}
 		
 		replay[i].prong = i;
-		replay[i].last = 0;		
 	}
 	replay[REPLAY_LEN-1].last = 1; // indicate this is the last step
 	
