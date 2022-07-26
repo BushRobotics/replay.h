@@ -52,7 +52,8 @@ void opcontrol() {
 	
 ```
 ### Saving a replay
-Just call `write_replay(replay, filename)`. If you're using an SD card in your VEX brain, the filename should start with `/usd/`
+Just call `write_replay(replay, filename)`. If you're using an SD card in your VEX brain, the filename should start with `/usd/`.
+If you've allocated more memory than the length of your replay, all you have to do is mark the last step you want as last, and when it is saved, **everything after the first step where `replay[i].last == 1` will be removed**
 
 ### Replaying a replay
 First, load the replay.
