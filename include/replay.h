@@ -1,0 +1,1 @@
+#define HWORLD "Hello world!"
